@@ -3,7 +3,14 @@
 \usepackage{lscape}
 \usepackage{nopageno}
 \usepackage{pdflscape}
-\usetikzlibrary{positioning}
+\usetikzlibrary{shapes.geometric,positioning}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
 
 \begin{document}
   \begin{landscape}
@@ -21,22 +28,32 @@
 %            draw=blue!9!white] (4.5,0.5) circle (0.25cm);
 %    \end{tikzpicture}
     \begin{tikzpicture}
-      \node at (0,0) [name=first,
+      \node at (0,0) [trapezium,
+                      name=trapezium,
+                      line width=2.5pt,
+                      node distance=3pt,
+                      minimum width=4.5cm,
+                      %maximum height=1cm,
                       fill=blue!9!white,
                       draw=blue!50!white,
+                      trapezium angle=25] {};
+      \node          [name=first,
                       rounded corners,
                       line width=2.5pt,
                       node distance=3pt,
+                      fill=blue!9!white,
+                      draw=blue!50!white,
+                      minimum width=5cm,
                       minimum height=1cm,
-                      minimum width=5cm] {};
+                      below=of trapezium.south] {};
       \node          [name=second,
                       fill=blue!9!white,
                       draw=blue!50!white,
                       rounded corners,
                       line width=2.5pt,
                       node distance=3pt,
-                      minimum height=1cm,
                       minimum width=5cm,
+                      minimum height=1cm,
                       below=of first.south] {};
       \node          [name=third,
                       fill=blue!9!white,
@@ -44,8 +61,8 @@
                       rounded corners,
                       line width=2.5pt,
                       node distance=3pt,
-                      minimum height=1cm,
                       minimum width=5cm,
+                      minimum height=1cm,
                       below=of second.south] {};
       \node          [name=fourth,
                       fill=blue!9!white,
@@ -53,8 +70,8 @@
                       rounded corners,
                       line width=2.5pt,
                       node distance=3pt,
-                      minimum height=1cm,
                       minimum width=5cm,
+                      minimum height=1cm,
                       below=of third.south] {};
       \node at (2,0) [name=firstCircle,
                       circle,

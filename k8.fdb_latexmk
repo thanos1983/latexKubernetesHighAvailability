@@ -1,8 +1,9 @@
 # Fdb version 3
-["pdflatex"] 1671988185 "k8.tex" "k8.pdf" "k8" 1671988185
+["pdflatex"] 1671990139 "k8.tex" "k8.pdf" "k8" 1671990139
   "/etc/texmf/web2c/texmf.cnf" 1665225651 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty" 1583617216 6501 4011d89d9621e0b0901138815ba5ff29 ""
+  "/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty" 1572645307 1057 525c2192b5febbd8c1f662c9468335bb ""
   "/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex" 1601326656 992 855ff26741653ab54814101ca36e153c ""
   "/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex" 1601326656 43820 1fef971b75380574ab35a0d37fd92608 ""
   "/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex" 1601326656 19324 f4e4c6403dd0f1605fd20ed22fa79dea ""
@@ -22,9 +23,11 @@
   "/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex" 1601326656 21989 fdc867d05d228316de137a9fc5ec3bbe ""
   "/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex" 1601326656 8893 e851de2175338fdf7c17f3e091d94618 ""
   "/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex" 1601326656 3937 3f208572dd82c71103831da976d74f1a ""
+  "/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.geometric.code.tex" 1601326656 339 be0fe46d92a80e3385dd6a83511a46f2 ""
   "/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex" 1608933718 11518 738408f795261b70ce8dd47459171309 ""
   "/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex" 1621110968 186007 6e7dfe0bd57520fd5f91641aa72dcac8 ""
   "/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex" 1601326656 32995 ac577023e12c0e4bd8aa420b2e852d1a ""
+  "/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.geometric.code.tex" 1606168878 160993 6a81d63e475cc43874b46ed32a0a37c8 ""
   "/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex" 1557692582 3063 8c415c68a0f3394e45cfeca0b65f6ee6 ""
   "/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex" 1601326656 521 8e224a7af69b7fee4451d1bf76b46654 ""
   "/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex" 1601326656 13391 84d29568c13bdce4133ab4a214711112 ""
@@ -60,6 +63,7 @@
   "/usr/share/texlive/texmf-dist/tex/latex/base/article.cls" 1636758526 20144 8a7de377ae7a11ee924a7499611f5a9d ""
   "/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo" 1636758526 8448 96f18c76bf608a36ee6fbf021ac1dd32 ""
   "/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1579991033 13886 d1306dcf79a944f6988e688c1785f9ce ""
+  "/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty" 1578002852 41601 9cf6c5257b1bc7af01a58859749dd37a ""
   "/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg" 1459978653 1213 620bba36b25224fa9b7e1ccb4ecb76fd ""
   "/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg" 1465944070 1224 978390e9c2234eab29404bc21b268d1e ""
   "/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def" 1601931164 19103 48d29b6e2a64cb717117ef65f107b404 ""
@@ -86,8 +90,8 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1665225663 1405647 4db74c491fe1b941a3bdd547b5c97044 ""
-  "k8.aux" 1671988185 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "k8.tex" 1671988182 3195 89b8d297635ca3978a970fabf5755f92 ""
+  "k8.aux" 1671990139 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "k8.tex" 1671990137 3719 a8968cbdae184d955d29ce735863f05f ""
   (generated)
   "k8.aux"
   "k8.log"
