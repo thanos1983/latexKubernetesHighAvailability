@@ -14,92 +14,87 @@
 
 \begin{document}
   \begin{landscape}
-%    \begin{tikzpicture}
-%    \draw (-1.5,0) -- (1.5,0);
-%    \draw (0,-1.5) -- (0,1.5);
-%      \draw[fill=blue!9!white,
-%            draw=blue!50!white,
-%            rounded corners,
-%            line width=2.5pt] (0,0) rectangle (5.0,1.0);
-%      \draw[fill=white,
-%            draw=blue!9!white,
-%            rounded corners] (0.5,0.8) rectangle (0.25,0.25);
-%      \draw[fill=white,
-%            draw=blue!9!white] (4.5,0.5) circle (0.25cm);
-%    \end{tikzpicture}
     \begin{tikzpicture}
       \node at (0,0) [trapezium,
                       name=trapezium,
                       rounded corners,
                       line width=.05cm,
-                      node distance=.05cm,
                       minimum width=5cm,
-                      minimum height=.1cm,
                       fill=blue!9!white,
+                      minimum height=1cm,
                       draw=blue!50!white,
-                      trapezium angle=25] {};
+                      node distance=.05cm,
+                      trapezium stretches=true] {};
       \node          [name=first,
                       rounded corners,
                       line width=.05cm,
-                      node distance=.05cm,
                       fill=blue!9!white,
-                      draw=blue!50!white,
                       minimum width=5cm,
                       minimum height=1cm,
+                      draw=blue!50!white,
+                      node distance=.05cm,
                       below=of trapezium.south] {};
       \node          [name=second,
-                      fill=blue!9!white,
-                      draw=blue!50!white,
                       rounded corners,
                       line width=.05cm,
-                      node distance=.05cm,
+                      fill=blue!9!white,
                       minimum width=5cm,
                       minimum height=1cm,
+                      draw=blue!50!white,
+                      node distance=.05cm,
                       below=of first.south] {};
       \node          [name=third,
-                      fill=blue!9!white,
-                      draw=blue!50!white,
                       rounded corners,
                       line width=.05cm,
-                      node distance=.05cm,
                       minimum width=5cm,
+                      fill=blue!9!white,
+                      draw=blue!50!white,
                       minimum height=1cm,
+                      node distance=.05cm,
                       below=of second.south] {};
       \node          [name=fourth,
-                      fill=blue!9!white,
-                      draw=blue!50!white,
                       rounded corners,
                       line width=.05cm,
-                      node distance=.05cm,
                       minimum width=5cm,
+                      fill=blue!9!white,
+                      draw=blue!50!white,
                       minimum height=1cm,
+                      node distance=.05cm,
                       below=of third.south] {};
-      \node at (2,0) [name=firstCircle,
-                      circle,
+      \node          [circle,
                       fill=white,
+                      xshift=-5mm,
+                      name=firstCircle,
                       draw=blue!9!white,
-                      minimum size=0.5cm] {};
-      \node          [name=secondCircle,
-                      circle,
+                      minimum size=0.5cm] at (first.east) {};
+      \node          [circle,
                       fill=white,
+                      xshift=-5mm,
                       node distance=1cm,
                       draw=blue!9!white,
-                      minimum size=0.5cm,
-                      below=of firstCircle.south] {};
-      \node          [name=thirdCircle,
-                      circle,
+                      name=secondCircle,
+                      minimum size=0.5cm] at (second.east) {};
+      \node          [circle,
                       fill=white,
-                      node distance=20pt,
+                      xshift=-5mm,
+                      name=thirdCircle,
                       draw=blue!9!white,
                       minimum size=0.5cm,
-                      below=of secondCircle.south] {};
+                      node distance=20pt] at (third.east) {};
       \node          [name=forthCircle,
                       circle,
                       fill=white,
+                      xshift=-5mm,
                       node distance=1cm,
                       draw=blue!9!white,
-                      minimum size=0.5cm,
-                      below=of thirdCircle.south] {};
+                      minimum size=0.5cm] at (fourth.east) {};
+      \node          [name=fifth,
+                      rectangle,
+                      fill=white,
+                      xshift=5mm,
+                      draw=blue!9!white,
+                      minimum width=.35cm,
+                      minimum height=.8cm] at (first.west) {};
     \end{tikzpicture}
   \end{landscape}
 \end{document}
