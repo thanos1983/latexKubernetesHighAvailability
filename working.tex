@@ -1,0 +1,150 @@
+\documentclass{article}
+\usepackage{tikz}
+\usepackage{lscape}
+\usepackage{nopageno}
+\usepackage{pdflscape}
+\usetikzlibrary{shapes.geometric,positioning}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+
+\begin{document}
+  \begin{landscape}
+    \begin{tikzpicture}
+      \node[trapezium,
+            name=trapezium,
+            rounded corners,
+            line width=.05cm,
+            minimum width=5cm,
+            fill=blue!9!white,
+            minimum height=1cm,
+            draw=blue!50!white,
+            node distance=.05cm,
+            trapezium stretches=true] at (0,0) {};
+      \node[name=first,
+            rounded corners,
+            line width=.05cm,
+            fill=blue!9!white,
+            minimum width=5cm,
+            minimum height=1cm,
+            draw=blue!50!white,
+            node distance=.05cm,
+            below=of trapezium.south] {};
+      \node[name=second,
+            rounded corners,
+            line width=.05cm,
+            fill=blue!9!white,
+            minimum width=5cm,
+            minimum height=1cm,
+            draw=blue!50!white,
+            node distance=.05cm,
+            below=of first.south] {};
+      \node[name=third,
+            rounded corners,
+            line width=.05cm,
+            minimum width=5cm,
+            fill=blue!9!white,
+            draw=blue!50!white,
+            minimum height=1cm,
+            node distance=.05cm,
+            below=of second.south] {};
+      \node[name=fourth,
+            rounded corners,
+            line width=.05cm,
+            minimum width=5cm,
+            fill=blue!9!white,
+            draw=blue!50!white,
+            minimum height=1cm,
+            node distance=.05cm,
+            below=of third.south] {};
+      \node[circle,
+            fill=white,
+            xshift=-5mm,
+            name=firstCircle,
+            draw=blue!9!white,
+            minimum size=0.5cm] at (first.east) {};
+      \node[circle,
+            fill=white,
+            xshift=-5mm,
+            node distance=1cm,
+            draw=blue!9!white,
+            name=secondCircle,
+            minimum size=0.5cm] at (second.east) {};
+      \node[circle,
+            fill=white,
+            xshift=-5mm,
+            name=thirdCircle,
+            draw=blue!9!white,
+            minimum size=0.5cm,
+            node distance=20pt] at (third.east) {};
+      \node[name=forthCircle,
+            circle,
+            fill=white,
+            xshift=-5mm,
+            node distance=1cm,
+            draw=blue!9!white,
+            minimum size=0.5cm] at (fourth.east) {};
+      \node[trapezium,
+            trapezium left angle=70, 
+            trapezium right angle=110,
+            fill=white,
+            xshift=6mm,
+            draw=blue!9!white,
+            inner xsep=0.3pt,%<- you can control shape width from here
+            minimum height=.8cm] at (first.west) {};
+      \node[trapezium,
+            trapezium left angle=70, 
+            trapezium right angle=110,
+            fill=white,
+            xshift=12mm,
+            draw=blue!9!white,
+            inner xsep=0.3pt,%<- you can control shape width from here
+            minimum height=.8cm] at (first.west) {};
+      \node[trapezium,
+            trapezium left angle=70, 
+            trapezium right angle=110,
+            fill=white,
+            xshift=18mm,
+            draw=blue!9!white,
+            inner xsep=0.3pt,%<- you can control shape width from here
+            minimum height=.8cm] at (first.west) {};
+      \node[trapezium,
+            trapezium left angle=70, 
+            trapezium right angle=110,
+            fill=white,
+            xshift=24mm,
+            draw=blue!9!white,
+            inner xsep=0.3pt,%<- you can control shape width from here
+            minimum height=.8cm] at (first.west) {};
+      \node[trapezium,
+            trapezium left angle=70, 
+            trapezium right angle=110,
+            fill=white,
+            xshift=30mm,
+            draw=blue!9!white,
+            inner xsep=0.3pt,%<- you can control shape width from here
+            minimum height=.8cm] at (first.west) {};
+      \node[trapezium,
+            trapezium left angle=70, 
+            trapezium right angle=110,
+            fill=white,
+            xshift=36mm,
+            draw=blue!9!white,
+            inner xsep=0.3pt,%<- you can control shape width from here
+            minimum height=.8cm] at (first.west) {};
+      \foreach \x in {6,12,18,24,30,36}
+        \node[trapezium,
+              trapezium left angle=70, 
+              trapezium right angle=110,
+              fill=white,
+              xshift=\x mm,
+              draw=blue!9!white,
+              inner xsep=0.3pt,%<- you can control shape width from here
+              minimum height=.8cm] at (second.west) {};
+    \end{tikzpicture}
+  \end{landscape}
+\end{document}
