@@ -6,10 +6,10 @@
 \usetikzlibrary{shapes.geometric,positioning}
 \usepackage{geometry}
  \geometry{
- a4paper,
- total={170mm,257mm},
- left=20mm,
- top=20mm,
+    a4paper,
+    total={170mm,257mm},
+    left=20mm,
+    top=20mm,
  }
  
 \tikzstyle{custonTrapezium}=[trapezium,
@@ -30,14 +30,16 @@
                              minimum height=1cm,
                              node distance=.05cm]
 \tikzstyle{customRectangleSecondary}=[rectangle,
+                             yshift=-.5cm,
+                             xshift=-1.5cm,
                              rounded corners,
-                             fill opacity=0.9,
-                             draw opacity=0.9,
+                             fill opacity=.5,
+                             draw opacity=.5,
                              line width=.05cm,
-                             minimum width=1cm,
+                             minimum width=4cm,
                              fill=blue!9!white,
                              draw=blue!50!white,
-                             minimum height=1cm,
+                             minimum height=4.5cm,
                              node distance=.05cm]
 
 \begin{document}
@@ -59,9 +61,14 @@
       \node[customRectanglePrime,
             name=masterOneFourth,
             below=of masterOneThird.south] {};
-      \node[customRectangleSecondary,
-            name=packagesMasterPrime] at (masterOneSecond.north east) {};
-      \foreach \location in {masterOneFirst,masterOneSecond,masterOneThird,masterOneFourth}
+      \node[customRectanglePrime,
+            name=masterOneFifth,
+            below=of masterOneFourth.south] {};
+      \foreach \location in {masterOneFirst,
+                             masterOneSecond,
+                             masterOneThird,
+                             masterOneFourth,
+                             masterOneFifth}
         \node[circle,
               fill=white,
               xshift=-5mm,
@@ -69,7 +76,11 @@
               draw=blue!9!white,
               minimum size=0.5cm] at (\location.east) {};
       \foreach \xdistance in {6,12,18,24,30,36}
-        \foreach \location in {masterOneFirst,masterOneSecond,masterOneThird,masterOneFourth}
+        \foreach \location in {masterOneFirst,
+                               masterOneSecond,
+                               masterOneThird,
+                               masterOneFourth,
+                               masterOneFifth}
           \node[trapezium,
                 trapezium left angle=70, 
                 trapezium right angle=110,
@@ -78,6 +89,8 @@
                 draw=blue!9!white,
                 inner xsep=0.3pt,%<- you can control shape width from here
                 minimum height=.8cm] at (\location.west) {};
+      \node[customRectangleSecondary,
+            name=packagesMasterPrime] at (masterOneThird.south east) {};
     \end{tikzpicture}
   \end{landscape}
 \end{document}

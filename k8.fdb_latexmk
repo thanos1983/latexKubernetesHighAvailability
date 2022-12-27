@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1672074822 "k8.tex" "k8.pdf" "k8" 1672074823
+["pdflatex"] 1672101577 "k8.tex" "k8.pdf" "k8" 1672101578
   "/etc/texmf/web2c/texmf.cnf" 1665225651 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty" 1583617216 6501 4011d89d9621e0b0901138815ba5ff29 ""
@@ -90,8 +90,8 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1665225663 1405647 4db74c491fe1b941a3bdd547b5c97044 ""
-  "k8.aux" 1672074823 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "k8.tex" 1672074820 3148 d735d7c19ef6f7ea9d6515060bc2cfea ""
+  "k8.aux" 1672101578 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "k8.tex" 1672101575 3639 02c83f1dd1ec6be78e370af2bcb6a763 ""
   (generated)
   "k8.aux"
   "k8.log"
