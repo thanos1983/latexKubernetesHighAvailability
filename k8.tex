@@ -5,95 +5,125 @@
 \usepackage{pdflscape}
 \usetikzlibrary{shapes.geometric,positioning}
 \usepackage{geometry}
-\geometry{
-      a4paper,
-      total={170mm,257mm},
-      left=20mm,
-      top=20mm,
-}
-
+ \geometry{
+    a4paper,
+    total={170mm,257mm},
+    left=20mm,
+    top=20mm,
+ }
+ 
 \tikzstyle{custonTrapezium}=[trapezium,
-rounded corners,
-line width=.05cm,
-minimum width=5cm,
-fill=blue!9!white,
-minimum height=1cm,
-draw=blue!50!white,
-node distance=.05cm,
-trapezium stretches=true]
+                             rounded corners,
+                             line width=.05cm,
+                             minimum width=5cm,
+                             fill=blue!9!white,
+                             minimum height=1cm,
+                             draw=blue!50!white,
+                             node distance=.05cm,
+                             trapezium stretches=true]
 \tikzstyle{customRectanglePrime}=[rectangle,
-rounded corners,
-line width=.05cm,
-minimum width=5cm,
-fill=blue!9!white,
-draw=blue!50!white,
-minimum height=1cm,
-node distance=.05cm]
-\tikzstyle{circleRectangle}=[circle,
-fill=white,
-xshift=-5mm,
-node distance=1cm,
-draw=blue!9!white,
-minimum size=0.5cm]
-\tikzstyle{tiltTrapezium}=[trapezium,
-trapezium left angle=70,
-trapezium right angle=110,
-fill=white,
-draw=blue!9!white,
-inner xsep=0.3pt,%<- you can control shape width from here
-minimum height=.8cm]
+                             rounded corners,
+                             line width=.05cm,
+                             minimum width=5cm,
+                             fill=blue!9!white,
+                             draw=blue!50!white,
+                             minimum height=1cm,
+                             node distance=.05cm]
 \tikzstyle{customRectangleSecondary}=[rectangle,
-yshift=-.5cm,
-xshift=-1.5cm,
-rounded corners,
-fill opacity=.5,
-draw opacity=.5,
-line width=.05cm,
-minimum width=4cm,
-fill=blue!9!white,
-draw=blue!50!white,
-minimum height=4.5cm,
-node distance=.05cm]
+                             yshift=-.5cm,
+                             xshift=-1.5cm,
+                             rounded corners,
+                             fill opacity=.5,
+                             draw opacity=.5,
+                             line width=.05cm,
+                             minimum width=4cm,
+                             fill=blue!9!white,
+                             draw=blue!50!white,
+                             minimum height=4.5cm,
+                             node distance=.05cm]
+\tikzstyle{customRectanglePod}=[rectangle,
+                             rounded corners,
+                             fill opacity=.7,
+                             draw opacity=.7,
+                             line width=.05cm,
+                             minimum width=2cm,
+                             minimum height=.5cm,
+                             node distance=.03cm]
 
 \begin{document}
-\begin{landscape}
-      \begin{tikzpicture}
-            \node[custonTrapezium,
-                  name=masterOne] at (0,0) {};
-            %      \node[custonTrapezium,
-            %            name=masterTwo] at (6,0) {};
-            \node[customRectanglePrime,
-                  name=masterOneFirst,
-                  below=of masterOne.south] {};
-            \node[customRectanglePrime,
-                  name=masterOneSecond,
-                  below=of masterOneFirst.south] {};
-            \node[customRectanglePrime,
-                  name=masterOneThird,
-                  below=of masterOneSecond.south] {};
-            \node[customRectanglePrime,
-                  name=masterOneFourth,
-                  below=of masterOneThird.south] {};
-            \node[customRectanglePrime,
-                  name=masterOneFifth,
-                  below=of masterOneFourth.south] {};
-            \foreach \location in {masterOneFirst,
-                        masterOneSecond,
-                        masterOneThird,
-                        masterOneFourth,
-                        masterOneFifth}
-            \node[circleRectangle] at (\location.east) {};
-            \foreach \xdistance in {6,12,18,24,30,36}
-            \foreach \location in {masterOneFirst,
-                        masterOneSecond,
-                        masterOneThird,
-                        masterOneFourth,
-                        masterOneFifth}
-            \node[tiltTrapezium,
-                  xshift=\xdistance mm
-            ] at (\location.west) {};
-            \node[customRectangleSecondary,
-                  name=packagesMasterPrime] at (masterOneThird.south east) {};
-      \end{tikzpicture}
-\end{landscape}
+  \begin{landscape}
+    \begin{tikzpicture}
+      % First Trapezium
+      \node[custonTrapezium,
+            name=masterOne] at (0,0) {};
+%      \node[custonTrapezium,
+%            name=masterTwo] at (6,0) {};
+      % All rectangles vertically
+      \node[customRectanglePrime,
+            name=masterOneFirst,
+            below=of masterOne.south] {};
+      \node[customRectanglePrime,
+            name=masterOneSecond,
+            below=of masterOneFirst.south] {};
+      \node[customRectanglePrime,
+            name=masterOneThird,
+            below=of masterOneSecond.south] {};
+      \node[customRectanglePrime,
+            name=masterOneFourth,
+            below=of masterOneThird.south] {};
+      \node[customRectanglePrime,
+            name=masterOneFifth,
+            below=of masterOneFourth.south] {};
+      % Circle in rectangle
+      \foreach \location in {masterOneFirst,
+                             masterOneSecond,
+                             masterOneThird,
+                             masterOneFourth,
+                             masterOneFifth}
+        \node[circle,
+              fill=white,
+              xshift=-5mm,
+              node distance=1cm,
+              draw=blue!9!white,
+              minimum size=0.5cm] at (\location.east) {};
+      % Rectangle tilted
+      \foreach \xdistance in {6,12,18,24,30,36}
+        \foreach \location in {masterOneFirst,
+                               masterOneSecond,
+                               masterOneThird,
+                               masterOneFourth,
+                               masterOneFifth}
+          \node[trapezium,
+                trapezium left angle=70, 
+                trapezium right angle=110,
+                fill=white,
+                xshift=\xdistance mm,
+                draw=blue!9!white,
+                inner xsep=0.3pt,%<- you can control shape width from here
+                minimum height=.8cm] at (\location.west) {};
+      % Seethrough rectangle
+      \node[customRectangleSecondary,
+            name=packagesMasterPrime] at (masterOneThird.south east) {};
+      \node[customRectanglePod,
+            name=firstPod,
+            xshift=-1.2cm,
+            fill=yellow!50!white,
+            draw=yellow!50!white] at (packagesMasterPrime.east) {\textbf{\textit{\tiny API SERVER}}};
+      \node[customRectanglePod,
+            name=secondPod,
+            fill=green!50!white,
+            draw=green!50!white,
+            below=of firstPod] {\textbf{\textit{\tiny CONTROLLER}}};
+      \node[customRectanglePod,
+            name=thirdPod,
+            fill=red!50!white,
+            draw=red!50!white,
+            below=of secondPod] {\textbf{\textit{\tiny SCHEDULER}}};
+      \node[customRectanglePod,
+            name=fourtPod,
+            fill=orange!50!white,
+            draw=orange!50!white,
+            below=of thirdPod] {\textbf{\textit{\tiny ETCD}}};
+    \end{tikzpicture}
+  \end{landscape}
 \end{document}
